@@ -23,4 +23,4 @@ jobs:
         env:
           API_BASE_URL: ${{ secrets.API_BASE_URL }}
           ENABLE_BLOCKING: ${{ secrets.ENABLE_BLOCKING }}
-        run: npm run build
+        run: npm build
