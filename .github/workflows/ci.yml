@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run build
+        env:
+          API_BASE_URL: ${{ secrets.API_BASE_URL }}
+          ENABLE_BLOCKING: ${{ secrets.ENABLE_BLOCKING }}
+        run: npm run build
