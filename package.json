@@ -1,6 +1,6 @@
 {
 	"dependencies": {
 		"child_process": "^1.0.2",
-		"react-native": "^0.84.1"
+		"react-native": "^0.85.2"
 	}
 }
